@@ -1,0 +1,377 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"id": "25f15fe7-721b-d3f8-38c8-36e289772664",
+			"name": "Tinder",
+			"description": "",
+			"order": [
+				"280f9652-be3d-2a06-cb51-8c6844189c3e",
+				"8f3fe0cd-309d-352b-1fd9-4f0c506dca57",
+				"7e996ec5-bef1-4f33-5c90-18a53354c5b3",
+				"cb93fba3-c685-618e-9028-d25b19aca8d3",
+				"9f169aeb-0c66-27d8-044d-074902dc1b64"
+			],
+			"folders": [
+				{
+					"id": "4dbb5e7d-8e09-6ac1-21bb-c29fe0a65f29",
+					"name": "Feed",
+					"description": "",
+					"order": [
+						"e66f1c22-5722-79ba-cdc5-bc9500d450e9"
+					],
+					"collection_name": "Tinder",
+					"collection_id": "25f15fe7-721b-d3f8-38c8-36e289772664"
+				},
+				{
+					"id": "3600803d-912b-120c-5306-244e7ab47453",
+					"name": "Location",
+					"description": "",
+					"order": [
+						"b3ad15f4-2f8d-258c-1b4e-050698e3e469"
+					],
+					"collection_name": "Tinder",
+					"collection_id": "25f15fe7-721b-d3f8-38c8-36e289772664"
+				},
+				{
+					"id": "d7a2db2d-c32c-64c8-de33-726c8ce0a0c7",
+					"name": "Moment",
+					"description": "",
+					"order": [
+						"952f9af6-1ace-7543-0adc-420eec55319f",
+						"9f169aeb-0c66-27d8-044d-074902dc1b64",
+						"b6a64f1c-f089-38f7-59a8-a08a3349da6c"
+					],
+					"collection_name": "Tinder",
+					"collection_id": "25f15fe7-721b-d3f8-38c8-36e289772664"
+				},
+				{
+					"id": "3b780bf9-a8ee-0784-a41e-8376b778f11f",
+					"name": "Purchase",
+					"description": "",
+					"order": [
+						"23df8305-11e5-6f4d-8c2a-e0f280c6f3be"
+					],
+					"collection_name": "Tinder",
+					"collection_id": "25f15fe7-721b-d3f8-38c8-36e289772664"
+				},
+				{
+					"id": "8943bba3-7408-6359-7413-5be6bc83dc42",
+					"name": "User",
+					"description": "",
+					"order": [
+						"1e7116e1-1abe-da5f-1e73-ab76ba33e221",
+						"029279c0-6277-7209-cfdd-2d88327dd90f",
+						"91a0ad57-f791-3545-972c-8a86d0ecc40b"
+					],
+					"collection_name": "Tinder",
+					"collection_id": "25f15fe7-721b-d3f8-38c8-36e289772664"
+				}
+			],
+			"timestamp": 1419268857505,
+			"synced": false,
+			"remote_id": 0,
+			"remoteLink": "",
+			"requests": [
+				{
+					"id": "029279c0-6277-7209-cfdd-2d88327dd90f",
+					"headers": "X-Auth-Token: {{X-Auth-Token}}\n",
+					"url": "{{protocol}}://{{host}}/user/c08d9955148bc0199789922ca232a7",
+					"preRequestScript": "",
+					"pathVariables": {},
+					"method": "GET",
+					"data": [],
+					"dataMode": "params",
+					"version": 2,
+					"tests": "",
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1420325028651,
+					"name": "Id",
+					"description": "",
+					"collectionId": "25f15fe7-721b-d3f8-38c8-36e289772664",
+					"responses": []
+				},
+				{
+					"id": "1e7116e1-1abe-da5f-1e73-ab76ba33e221",
+					"headers": "X-Auth-Token: {{X-Auth-Token}}\n",
+					"url": "{{protocol}}://{{host}}/user/recs",
+					"preRequestScript": "",
+					"pathVariables": {},
+					"method": "GET",
+					"data": [],
+					"dataMode": "params",
+					"version": 2,
+					"tests": "",
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1420325039077,
+					"name": "Recs",
+					"description": "",
+					"collectionId": "25f15fe7-721b-d3f8-38c8-36e289772664",
+					"responses": []
+				},
+				{
+					"id": "23df8305-11e5-6f4d-8c2a-e0f280c6f3be",
+					"headers": "X-Auth-Token: {{X-Auth-Token}}\n",
+					"url": "{{protocol}}://{{host}}/purchase/sku",
+					"preRequestScript": "",
+					"pathVariables": {},
+					"method": "GET",
+					"data": [],
+					"dataMode": "params",
+					"version": 2,
+					"tests": "",
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1420324979883,
+					"name": "Sku",
+					"description": "",
+					"collectionId": "25f15fe7-721b-d3f8-38c8-36e289772664",
+					"responses": []
+				},
+				{
+					"id": "280f9652-be3d-2a06-cb51-8c6844189c3e",
+					"headers": "Content-Type: application/json\nUser-Agent: Tinder Android Version 4.0.3\n",
+					"url": "{{protocol}}://{{host}}/auth",
+					"preRequestScript": "",
+					"pathVariables": {},
+					"method": "POST",
+					"data": "{\n\t\"facebook_token\": \"token\",\n\t\"locale\": \"en\"\n}",
+					"dataMode": "raw",
+					"version": 2,
+					"tests": "var data = JSON.parse(responseBody);\n\npostman.setEnvironmentVariable(\"X-Auth-Token\", data.token);",
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1420325635911,
+					"name": "Auth",
+					"description": "",
+					"collectionId": "25f15fe7-721b-d3f8-38c8-36e289772664",
+					"responses": []
+				},
+				{
+					"id": "7e996ec5-bef1-4f33-5c90-18a53354c5b3",
+					"headers": "X-Auth-Token: {{X-Auth-Token}}\n",
+					"url": "{{protocol}}://{{host}}/pass/52866e0750ecdd3858000030",
+					"preRequestScript": "",
+					"pathVariables": {},
+					"method": "GET",
+					"data": [],
+					"dataMode": "params",
+					"version": 2,
+					"tests": "",
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1420324535756,
+					"name": "Pass",
+					"description": "",
+					"collectionId": "25f15fe7-721b-d3f8-38c8-36e289772664",
+					"responses": []
+				},
+				{
+					"id": "8f3fe0cd-309d-352b-1fd9-4f0c506dca57",
+					"headers": "X-Auth-Token: {{X-Auth-Token}}\n",
+					"url": "{{protocol}}://{{host}}/like/52866e0750ecdd3858000030",
+					"preRequestScript": "",
+					"pathVariables": {},
+					"method": "GET",
+					"data": [],
+					"dataMode": "params",
+					"version": 2,
+					"tests": "",
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1420324462827,
+					"name": "Like",
+					"description": "",
+					"collectionId": "25f15fe7-721b-d3f8-38c8-36e289772664",
+					"responses": []
+				},
+				{
+					"id": "91a0ad57-f791-3545-972c-8a86d0ecc40b",
+					"headers": "X-Auth-Token: {{X-Auth-Token}}\nContent-Type: application/json\n",
+					"url": "{{protocol}}://{{host}}/user/matches/c08d9955148bc0199789922ca232a7",
+					"preRequestScript": "",
+					"pathVariables": {},
+					"method": "POST",
+					"data": "{\n\t\"message\": \"Lorem ipsum, dolor sit amet\"\n}",
+					"dataMode": "raw",
+					"version": 2,
+					"tests": "",
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1420325013284,
+					"name": "Matches",
+					"description": "",
+					"collectionId": "25f15fe7-721b-d3f8-38c8-36e289772664",
+					"responses": []
+				},
+				{
+					"id": "952f9af6-1ace-7543-0adc-420eec55319f",
+					"headers": "X-Auth-Token: {{X-Auth-Token}}\n",
+					"url": "{{protocol}}://{{host}}/moment/52866e0750ecdd3858000030/like",
+					"preRequestScript": "",
+					"pathVariables": {},
+					"method": "POST",
+					"data": [],
+					"dataMode": "params",
+					"version": 2,
+					"tests": "",
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1420324951324,
+					"name": "Like",
+					"description": "",
+					"collectionId": "25f15fe7-721b-d3f8-38c8-36e289772664",
+					"responses": []
+				},
+				{
+					"id": "9f169aeb-0c66-27d8-044d-074902dc1b64",
+					"headers": "X-Auth-Token: {{X-Auth-Token}}\nContent-Type: application/json\n",
+					"url": "{{protocol}}://{{host}}/profile",
+					"preRequestScript": "",
+					"pathVariables": {},
+					"method": "POST",
+					"data": "{\n\t\"bio\": \"New bio\"\n}",
+					"dataMode": "raw",
+					"version": 2,
+					"tests": "",
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1420324934126,
+					"name": "Profile",
+					"description": "",
+					"collectionId": "25f15fe7-721b-d3f8-38c8-36e289772664",
+					"responses": []
+				},
+				{
+					"id": "b3ad15f4-2f8d-258c-1b4e-050698e3e469",
+					"headers": "X-Auth-Token: {{X-Auth-Token}}\n",
+					"url": "{{protocol}}://{{host}}/location/popular",
+					"preRequestScript": "",
+					"pathVariables": {},
+					"method": "GET",
+					"data": [],
+					"dataMode": "params",
+					"version": 2,
+					"tests": "",
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1420324987723,
+					"name": "Popular",
+					"description": "",
+					"collectionId": "25f15fe7-721b-d3f8-38c8-36e289772664",
+					"responses": []
+				},
+				{
+					"id": "b6a64f1c-f089-38f7-59a8-a08a3349da6c",
+					"headers": "X-Auth-Token: {{X-Auth-Token}}\n",
+					"url": "{{protocol}}://{{host}}/moment/52866e0750ecdd3858000030/pass",
+					"preRequestScript": "",
+					"pathVariables": {},
+					"method": "POST",
+					"data": [],
+					"dataMode": "params",
+					"version": 2,
+					"tests": "",
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1420324958919,
+					"name": "Pass",
+					"description": "",
+					"collectionId": "25f15fe7-721b-d3f8-38c8-36e289772664",
+					"responses": []
+				},
+				{
+					"id": "cb93fba3-c685-618e-9028-d25b19aca8d3",
+					"headers": "Content-Type: application/json\nX-Auth-Token: {{X-Auth-Token}}\n",
+					"url": "{{protocol}}://{{host}}/updates",
+					"preRequestScript": "",
+					"pathVariables": {},
+					"method": "POST",
+					"data": "{\n\t\"last_activity_date\": \"2015-01-03T00:08:42.800Z\"\n}",
+					"dataMode": "raw",
+					"version": 2,
+					"tests": "",
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1420324547169,
+					"name": "Updates",
+					"description": "",
+					"collectionId": "25f15fe7-721b-d3f8-38c8-36e289772664",
+					"responses": []
+				},
+				{
+					"id": "e66f1c22-5722-79ba-cdc5-bc9500d450e9",
+					"headers": "Content-Type: application/json\nX-Auth-Token: {{X-Auth-Token}}\n",
+					"url": "{{protocol}}://{{host}}/feed/moments",
+					"preRequestScript": "",
+					"pathVariables": {},
+					"method": "POST",
+					"data": "{\n\t\"last_activity_date\": \"2014-12-15T23:35:06.212Z\",\n\t\"last_moment_id\": \"545abccec2dfb6a55300059cdc6e3f15fe06404780b89892298119ca\"\n}",
+					"dataMode": "raw",
+					"version": 2,
+					"tests": "",
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1420324971881,
+					"name": "Moments",
+					"description": "",
+					"collectionId": "25f15fe7-721b-d3f8-38c8-36e289772664",
+					"responses": []
+				}
+			]
+		}
+	],
+	"environments": [
+		{
+			"id": "6e3855ec-2127-78bc-ec7a-91e37df2ff5f",
+			"name": "Dev (api.gotinder.dev)",
+			"values": [
+				{
+					"key": "host",
+					"value": "api.gotinder.dev",
+					"type": "text",
+					"name": "host",
+					"enabled": true
+				},
+				{
+					"key": "protocol",
+					"value": "http",
+					"type": "text",
+					"name": "protocol",
+					"enabled": true
+				}
+			],
+			"timestamp": 1420321243069
+		},
+		{
+			"id": "3f1cf4d0-8468-47aa-7255-f930db10b68a",
+			"name": "Production (api.gotinder.com)",
+			"values": [
+				{
+					"key": "host",
+					"value": "api.gotinder.com",
+					"type": "text",
+					"name": "host",
+					"enabled": true
+				},
+				{
+					"key": "protocol",
+					"value": "https",
+					"type": "text",
+					"name": "protocol",
+					"enabled": true
+				},
+				{
+					"key": "X-Auth-Token",
+					"type": "text",
+					"value": "b4339195-2e7b-4f05-a264-54a80a5edbe7"
+				}
+			],
+			"timestamp": 1420324375244
+		}
+	],
+	"headerPresets": [],
+	"globals": []
+}

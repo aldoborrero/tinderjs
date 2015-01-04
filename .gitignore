@@ -1,0 +1,9 @@
+node_modules
+public
+.tmp
+.sass-cache
+.idea
+.vagrant
+client/bower_components
+dist
+server/npm-debug.log
